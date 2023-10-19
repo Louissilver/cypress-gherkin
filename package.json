@@ -1,0 +1,36 @@
+{
+  "author": "Luís Fernando da Silveira",
+  "license": "ISC",
+  "name": "cypress-automation-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open:desktop": "npx cypress open",
+    "cy:open:mobile": "npx cypress open --config-file cypress_mobile.config.js",
+    "cy:run:desktop": "npx cypress run --browser chrome",
+    "cy:run:desktop:report": "TESTOMATIO=tstmt_0DwR4C0xNfHw0ije0DKZUfBtKUrtEE0lGQ1697755869 npx cypress run --browser chrome",
+    "cy:run:mobile": "npx cypress run --config-file cypress_mobile.config.js --browser chrome",
+    "cy:run:mobile:report": "TESTOMATIO=tstmt_0DwR4C0xNfHw0ije0DKZUfBtKUrtEE0lGQ1697755869 npx cypress run --config-file cypress_mobile.config.js --browser chrome"
+  },
+  "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "2.2.0",
+    "@cypress/grep": "4.0.1",
+    "@testomatio/reporter": "^1.0.15",
+    "cypress-localstorage-commands": "2.2.3",
+    "esbuild": "0.19.5",
+    "eslint-plugin-cypress": "2.14.0",
+    "npm-run-all": "4.1.5",
+    "rimraf": "5.0.1"
+  },
+  "dependencies": {
+    "@babel/traverse": "7.23.2",
+    "@badeball/cypress-cucumber-preprocessor": "18.0.6",
+    "cypress": "^13.3.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "nonGlobalStepDefinitions": true
+  }
+}
